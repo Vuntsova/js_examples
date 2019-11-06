@@ -25,7 +25,7 @@ const createPost = yourNewPostTitle => {
     };
     posts.push(newPost);
 
-    const error = true;
+    const error = false;
 
     if (!error) {
       resolve();
@@ -37,3 +37,11 @@ const createPost = yourNewPostTitle => {
 createPost('Title 3 ')
   .then(getPost)
   .catch(err => console.log(err));
+
+const promise1 = Promise.resolve('Hello');
+const promise2 = Promise.resolve('err');
+const promise3 = new Promise((resolve, reject) => {
+  return resolve('Goodbyew');
+});
+
+Promise.all([promise1, promise2, promise3]).then(values => console.log(values));
