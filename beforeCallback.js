@@ -20,7 +20,7 @@ const getPost = () => {
   }, 2000);
 };
 
-const createPost = (yourNewPostTitle, yourNewPostBody) => {
+const createPost = (yourNewPostTitle) => {
   setTimeout(() => {
     const newPost = {
       title: yourNewPostTitle
